@@ -14,6 +14,10 @@ int main() {
 		cout << "Nhap 3 de tim cau 3"<<endl;
 		cout << "Nhap 4 de tim cau 4"<<endl;
 		cout << "Nhap 5 de tim cau 5"<<endl;
+		cout << "Nhap 6 de tim cau 5"<<endl;
+		cout << "Nhap 7 de tim cau 5"<<endl;
+		cout << "Nhap 8 de tim cau 5"<<endl;
+		cout << "Nhap 9 de tim cau 5"<<endl;
 		cout << "Nhap x de thoat chuong trinh"<<endl;
 		cout << "Nhap lua chon tai day: "<<endl;
 		cin>> luaChon;
