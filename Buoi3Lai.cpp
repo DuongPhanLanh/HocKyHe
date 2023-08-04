@@ -74,22 +74,84 @@ void Cau4() {
 }
 
 void Cau5() {
-	int n, s=0, k=0, a, b, c;
+	int n, k;
+	int a = n-k;
+	float b=1, c=1, d=1;
 	cout <<"NHap n: ";cin>>n;
 	cout <<"NHap k: ";cin>>k;
 	for(int i=1;i<=n;i++) {
-		a=s*i;
-		b=k*i;
-		c = (s-k)*i;
+		b*=i;
 	}
-	float tu = a;
-	float mau =b*c;
-	float kq = tu/mau;
+	for(int i=1; i<=k; i++) {
+		c*=i;
+	}
+	for(int i=1; i<=a; i++) {
+		d*=i;
+	}
+	float kq =b/(d*c);
+	cout <<b<<endl;
+	cout<<c<<endl;
+	cout<<d<<endl;
 	cout<<"KQ la: "<<kq<<endl;
 }
 
 void Cau6() {
-	
+	int d, r;
+	cout <<"Nhap cd: ";cin>>d;
+	cout<<"Nhap cr: ";cin>>r;
+	if(d<r || d<=0 || r<=0) {
+		cout <<"Nhap loi"<<endl;
+	}else {
+		for(int i=1; i<=r;i++) {
+			for(int j=1; j<=d;j++) {
+				if(i == 1 || j == 1 || i == r || j == d) {
+					cout<<"*";
+				}else {
+					cout <<" ";
+				}
+			}
+			cout <<"\n";
+		}
+	}
+	// if(i == 1 || k == 1 || i == n(cho chieu rong) || k == m(cho chieu dai))
+		
+}
+
+void Cau7() {
+	int n, s=0;
+	cout <<"Nhap n: ";cin>>n;
+	for(int i=1; i<=n/2; i++) {
+		if(n%i==0) 
+			s+=i;
+	}
+	if(s==n) {
+		cout<<s<<" Hoan thien"<<endl;
+	}else {
+		cout<<s<<" Ko hoan thien"<<endl;
+	}	
+}
+
+void Cau8() {
+	int n, k50, k20, k10,k5, k2, k1;
+	cout <<"Nhap gia tien: ";cin>>n;
+	k50=n/50000;
+	k20=(n%50000)/20000;
+	k10=((n%50000)%20000)/10000;
+	k5=(((n%50000)%20000)%10000)/5000;
+	k2=((((n%50000)%20000)%10000)%5000)/2000;
+	k1=(((((n%50000)%20000)%10000)%5000)%2000)%1000;
+		cout << "Phai tra "<< k50<<" to 50k, "<<k20<<" to 20k, "<<k10<<" to 10k, "<<k5<<" to 5k,"<<k2<<" to 2k,"<<k1<<" to 1k,"<<endl;
+}
+
+void Cau9() {
+	int a, b, c=0;
+			cout << "Nhap so nguyen : "; cin >> a;
+			while(a > 0){
+		        b = a % 10;
+		        c = c * 10 + b;
+		        a = a / 10;
+		    }
+			cout << "Gia tri nghich dao la: "<< c<<endl;
 }
 
 int main() {
@@ -125,13 +187,13 @@ int main() {
 		}else if(lc==5) {
 			Cau5();
 		}else if(lc==6) {
-			
+			Cau6();
 		}else if(lc==7) {
-			
+			Cau7();
 		}else if(lc==8) {
-			
+			Cau8();
 		}else if(lc==9) {
-			
+			Cau9();
 		}
 	}while(lc!=0);
 }
